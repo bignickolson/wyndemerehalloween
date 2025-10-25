@@ -107,6 +107,36 @@ h2 {
     color: var(--halloween-orange);
 }
 
+.medallion-example {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--halloween-orange);
+    text-align: center;
+}
+
+.medallion-example h3 {
+    color: var(--halloween-orange);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.example-medallion {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--halloween-orange);
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.example-text {
+    font-size: 0.9rem;
+    color: var(--halloween-light);
+    font-style: italic;
+    margin: 0;
+}
+
 .hunt-info p {
     font-size: 1.1rem;
     max-width: 600px;
