@@ -1,0 +1,239 @@
+/* Halloween Medallion Hunt Styles - Simple Static Version */
+:root {
+    --halloween-orange: #ff6b35;
+    --halloween-purple: #6b46c1;
+    --halloween-black: #1a1a1a;
+    --halloween-gray: #2d3748;
+    --halloween-light: #f7fafc;
+    --halloween-green: #38a169;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--halloween-light);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%), url('medallion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 107, 53, 0.2);
+    border-bottom: 3px solid var(--halloween-orange);
+}
+
+header h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--halloween-orange);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--halloween-light);
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hunt-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+section {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: var(--halloween-orange);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hunt-info {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--halloween-orange);
+    text-align: center;
+}
+
+.hunt-rules {
+    background: rgba(255, 107, 53, 0.15);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--halloween-orange);
+    text-align: center;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.rules-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rules-content p:last-child {
+    margin-bottom: 0;
+}
+
+.rules-content strong {
+    color: var(--halloween-orange);
+}
+
+.hunt-info p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.clues-container {
+    background: rgba(26, 26, 26, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--halloween-gray);
+}
+
+.clues-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.clue-card {
+    background: linear-gradient(135deg, var(--halloween-gray) 0%, var(--halloween-black) 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid var(--halloween-orange);
+    transition: transform 0.3s ease;
+}
+
+.clue-card:hover {
+    transform: translateY(-5px);
+}
+
+.clue-card.upcoming {
+    border-color: var(--halloween-gray);
+    opacity: 0.6;
+}
+
+.clue-card.upcoming:hover {
+    transform: none;
+}
+
+.clue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.clue-header h3 {
+    color: var(--halloween-orange);
+    font-size: 1.3rem;
+}
+
+.clue-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+.clue-status.available {
+    background: var(--halloween-green);
+}
+
+.clue-status.upcoming {
+    background: var(--halloween-gray);
+}
+
+.clue-content {
+    margin-left: 0.5rem;
+}
+
+.clue-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--halloween-light);
+}
+
+.clue-hint {
+    color: var(--halloween-orange);
+    font-size: 0.95rem;
+}
+
+.upcoming-text {
+    color: var(--halloween-gray);
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(26, 26, 26, 0.8);
+    border-top: 2px solid var(--halloween-orange);
+    margin-top: 2rem;
+}
+
+footer p {
+    color: var(--halloween-light);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 1rem 0.5rem;
+    }
+    
+    .hunt-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .hunt-rules {
+        position: static;
+    }
+    
+    .clue-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
